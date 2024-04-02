@@ -10,7 +10,7 @@ module Sidekiq
     CommandError = RedisClient::CommandError
 
     # You can add/remove items or clear the whole thing if you don't want deprecation warnings.
-    DEPRECATED_COMMANDS = %i[rpoplpush zrangebyscore zrevrange zrevrangebyscore getset hmset setex setnx].to_set
+    DEPRECATED_COMMANDS = %i[rpoplpush zrevrangebyscore getset hmset setex setnx].to_set
 
     module CompatMethods
       def info
